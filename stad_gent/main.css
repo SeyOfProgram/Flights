@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6; /* added line height for better readability */
+}
+
+.parking {
+    display: inline-block; /* added display: inline-block */
+    border: 3px solid #3a3939;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* added transition for smooth hover effect */
+    vertical-align: top; /* added vertical-align: top */
+    width: 30%; /* added width: 30% */
+    box-sizing: border-box;
+}
+
+.parking h2 {
+    margin-top: 0;
+    font-weight: bold; /* added font weight for headings */
+}
+
+.parking p {
+    margin: 10px 0;
+    font-size: 16px; /* added font size for paragraphs */
+}
+
+.open {
+    color: #008000; /* changed to a more vibrant green */
+}
+
+.closed {
+    color: #ff0033; /* changed to a more vibrant red */
+}
+
+.parking:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* added hover effect */
+}
