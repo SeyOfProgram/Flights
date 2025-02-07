@@ -1,6 +1,44 @@
 async function haalVluchtenOp() {
-    const apiKey = "d53e70b1d4f27ba35180db7d1e8798ce";
-    const url = `https://api.aviationstack.com/v1/flights?access_key=${apiKey}`;
+
+    async function getApiUrl() {
+        try {
+            const response = await fetch("http://localhost:3000/api/config");
+            if(!response.ok) {
+                throw new Error(error);
+            };
+            const data = await response.json();
+            console.log(data);
+            return data.apiUrl; // hier vinden we onze api_url uit de .env van de backend
+        } catch (error) {
+            console.log("fout bij ophalen apiUrl", error);
+        } finally {
+            const p = document.createElement("p");
+            p.classList.add("backEndInfo");
+            p.innerText = "express server connectie afgerond"
+            document.body.appendChild(p);
+        }
+    };
+
+    async function getApiKey() {
+        try {
+            const response = await fetch("http://localhost:3000/api/key");
+            if(!response.ok) {
+                throw new Error(error);
+            };
+            const data = await response.json();
+            console.log(data);
+            return data.apiKey; // hier vinden we onze api_url uit de .env van de backend
+        } catch (error) {
+            console.log("fout bij ophalen apiUrl", error);
+        } finally {
+            const p = document.createElement("p");
+            p.classList.add("backEndInfo");
+            p.innerText = "express server connectie afgerond"
+            document.body.appendChild(p);
+        }
+    };
+    // const apiKey = "d53e70b1d4f27ba35180db7d1e8798ce";
+    // const url = `https://api.aviationstack.com/v1/flights?access_key=${apiKey}`;
 
     // Luchthavens per land (IATA-codes)
     const luchthavens = {
@@ -24,7 +62,9 @@ async function haalVluchtenOp() {
     const geselecteerdeLuchthavens = luchthavens[geselecteerdLand];
 
     try {
-        const response = await fetch(url);
+        let API_URL = await getApiUrl();
+        let API_KEY = await getApiKey();
+        const response = await fetch(`${API_URL}/flights?access_key=${API_KEY}`);
         const data = await response.json();
 
         // Filter alleen vluchten voor het geselecteerde land
