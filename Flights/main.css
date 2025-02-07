@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    color: #0056b3;
+}
+
+label, select {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.vlucht {
+    background: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vlucht p {
+    margin: 5px 0;
+}
+
+select {
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+select:hover {
+    border-color: #0056b3;
+    background-color: #f0f8ff;
+}
+
+select:focus {
+    border-color: #004080;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

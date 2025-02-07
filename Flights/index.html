@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vluchtinformatie</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Vluchtinformatie per Land</h1>
+    
+    <label for="landSelect">Kies een land:</label>
+    <select id="landSelect" onchange="haalVluchtenOp()">
+        <option value="NL">Nederland</option>
+        <option value="BE">België</option>
+        <option value="DE">Duitsland</option>
+        <option value="FR">Frankrijk</option>
+        <option value="UK">Verenigd Koninkrijk</option>
+        <option value="US">Verenigde Staten</option>
+        <option value="CA">Canada</option>
+        <option value="TR">Turkije</option>
+        <option value="AE">Verenigde Arabische Emiraten</option>
+        <option value="SA">Saoedi-Arabië</option>
+        <option value="EG">Egypte</option>
+        <option value="ZA">Zuid-Afrika</option>
+        <option value="CN">China</option> <!-- China toegevoegd -->
+    </select>
+
+    <div id="resultaten"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
