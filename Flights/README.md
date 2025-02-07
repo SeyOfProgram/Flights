@@ -1,4 +1,4 @@
-/*************  ✨ Codeium Command ⭐  *************/
+
 # Flights API
 
 Omschrijving
